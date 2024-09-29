@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: my-mariadb-nodeport
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2024-09-29T07:32:23Z"
+  labels:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: my-mariadb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: mariadb
+    app.kubernetes.io/version: 11.4.3
+    helm.sh/chart: mariadb-19.0.7
+  name: my-mariadb-nodeport
+  namespace: default
+  resourceVersion: "714"
+  uid: b99da27e-f21f-4dbf-8de2-10c1acedfd96
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    - port: 3306                  # 容器內部的 MariaDB 端口
+      targetPort: 3306            # 容器內 MariaDB 服務監聽的端口
+      nodePort: 30006             # Kubernetes 節點上的暴露端口（30000-32767 範圍內）
+      protocol: TCP
+  selector:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: my-mariadb
+    app.kubernetes.io/name: mariadb
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
