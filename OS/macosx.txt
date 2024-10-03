@@ -23,3 +23,5 @@ https://www.jetbrains.com/idea/download/?section=mac
 
 Step 5: Download mysql
 https://dev.mysql.com/downloads/mysql/
+
+root / springboot
