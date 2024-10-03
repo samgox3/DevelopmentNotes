@@ -1,1 +1,2 @@
-
+Step 1: Install homebrew
+https://brew.sh/zh-tw/
