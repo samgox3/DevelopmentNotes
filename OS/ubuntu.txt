@@ -1,0 +1,10 @@
+在 GNOME 桌面環境中
+- 切換到上一個工作區：
+  按下 Ctrl + Alt + 向左箭頭 或 Ctrl + Alt + 向右箭頭。
+
+- 直接切換到特定工作區：
+  Super（Windows 鍵） + Page Up：切換到上一個工作區。
+  Super + Page Down：切換到下一個工作區。
+
+- 查看所有工作區：
+  按下 Super 鍵（Windows 鍵），進入「活動概覽」（Activities Overview），在右側可以看到所有工作區的預覽，使用箭頭鍵或滑鼠選擇。

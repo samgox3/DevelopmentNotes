@@ -3,6 +3,10 @@ my-mariadb
 
 root
 vrbK19HEV8%
+vrbK19HEV8
+
+mysql -h 172.18.0.2 -P 30006 -u root -p
+# Password: 1qaz@WSX3edc
 
 selector:
 app.kubernetes.io/component: primary
@@ -105,3 +109,66 @@ FLUSH PRIVILEGES;
 sql
 
 SHOW GRANTS FOR 'root'@'%';
+
+
+=================
+確認 MariaDB 資料庫權限
+
+確保資料庫用戶有權限從遠程主機連接。
+
+在 MariaDB 中創建具有遠程訪問權限的用戶：
+
+sql
+
+CREATE USER 'your_username'@'%' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON your_database.* TO 'your_username'@'%';
+FLUSH PRIVILEGES;
+
+'%' 表示允許從任何主機連接。如果要限制為特定 IP，可以替換為你的本地機器的 IP。
+8. 檢查 MariaDB 的監聽地址
+
+確保 MariaDB 配置為監聽所有網絡接口，而不僅僅是 localhost。
+
+修改 MariaDB 的配置文件（如 /etc/mysql/my.cnf）：
+
+ini
+
+[mysqld]
+bind-address = 0.0.0.0
+
+然後重啟 MariaDB：
+
+bash
+
+sudo systemctl restart mariadb
+
+注意：在 Kubernetes 中，你可能需要修改 MariaDB 的容器配置或使用 ConfigMap 來設置 bind-address。
+9. 驗證資料表是否創建
+
+一旦確認連接成功，運行 Spring Boot 應用，並在 MariaDB 中檢查是否已創建資料表。
+
+使用 MariaDB 客戶端查看資料表：
+
+sql
+
+USE your_database;
+SHOW TABLES;
+
+如果表已創建，表示連接和配置都是正確的。
+10. 如果仍有問題，檢查應用程序配置和依賴
+
+    確認你的 Spring Boot 應用使用了正確的 MariaDB 驅動。
+
+    檢查 pom.xml 或 build.gradle 中是否包含了 MariaDB 或 MySQL 的依賴。
+
+    pom.xml 示例：
+
+    xml
+
+<dependency>
+    <groupId>org.mariadb.jdbc</groupId>
+    <artifactId>mariadb-java-client</artifactId>
+    <version>2.7.4</version>
+</dependency>
+
+確保沒有版本衝突，並且驅動與資料庫版本兼容。
