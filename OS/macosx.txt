@@ -2,6 +2,9 @@ Step 1: Install homebrew
 https://brew.sh/zh-tw/
 
 
-Step 2: Install oh my zsh
+Step 2-1: Install oh my zsh
 https://github.com/zeus911/blog-3/blob/master/others/install-and-use-oh-my-zsh.md
 https://jumping-code.com/2024/04/30/mac-terminal-settings/#2-install-oh-my-zsh
+
+Step 2-2: Install iTerm2
+https://iterm2.com/
