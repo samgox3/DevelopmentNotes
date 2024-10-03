@@ -15,5 +15,8 @@ https://www.azul.com/core-post-download/?endpoint=zulu&uuid=3057386a-dcf3-47f9-9
 Step 3-2: Install zulu 11,17
 https://www.cnblogs.com/ryosetsu/p/base_java.html
 
-Step 3-2: COnfig JAVA
+Step 3-2: Config JAVA
 https://blog.csdn.net/weixin_46074829/article/details/129642593
+
+Step 4: Dopwnload and Install Intelij
+https://www.jetbrains.com/idea/download/?section=mac
