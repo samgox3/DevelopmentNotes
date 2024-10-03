@@ -8,3 +8,11 @@ https://jumping-code.com/2024/04/30/mac-terminal-settings/#2-install-oh-my-zsh
 
 Step 2-2: Install iTerm2
 https://iterm2.com/
+
+Step 3-1: Download zulu 11, 17
+https://www.azul.com/core-post-download/?endpoint=zulu&uuid=3057386a-dcf3-47f9-977b-da6d41c3eab6
+
+Step 3-2: Install zulu 11,17
+https://www.cnblogs.com/ryosetsu/p/base_java.html
+
+Step 3-2: COnfig JAVA
