@@ -20,3 +20,6 @@ https://blog.csdn.net/weixin_46074829/article/details/129642593
 
 Step 4: Dopwnload and Install Intelij
 https://www.jetbrains.com/idea/download/?section=mac
+
+Step 5: Download mysql
+https://downloads.mysql.com/archives/community/
