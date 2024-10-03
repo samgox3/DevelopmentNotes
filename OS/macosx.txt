@@ -22,4 +22,4 @@ Step 4: Dopwnload and Install Intelij
 https://www.jetbrains.com/idea/download/?section=mac
 
 Step 5: Download mysql
-https://downloads.mysql.com/archives/community/
+https://dev.mysql.com/downloads/mysql/
