@@ -25,3 +25,6 @@ Step 5: Download mysql
 https://dev.mysql.com/downloads/mysql/
 
 root / springboot
+
+Step 6: Talend API Tester - Chrome Extension
+https://chromewebstore.google.com/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?hl=zh-TW
